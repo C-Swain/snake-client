@@ -19,14 +19,14 @@ const connect = function () {
 		conn.write("Move: up")}, 1000)
   });
 	/*conn.on('move up', () => {setTimeout(() => {
-		conn.write("Move: up")}, 1500)
+		connection.write("Move: up")}, 1500)
 	});
 	conn.on('move up', () => {setTimeout(() => {
-		conn.write("Move: up")}, 2000)
+		connection.write("Move: up")}, 2000)
 	});
 
 	conn.on('move right', () => {setTimeout(() => {
-		conn.write("Move: up")}, 3000)
+		connection.write("Move: up")}, 3000)
 	});
 	*/
 
