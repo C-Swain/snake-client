@@ -8,7 +8,6 @@ const connect = function () {
     host: "135.23.223.133",
     port: "50542",
   });
-
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
@@ -18,17 +17,7 @@ const connect = function () {
 		setTimeout(() => {
 		conn.write("Move: up")}, 1000)
   });
-	/*conn.on('move up', () => {setTimeout(() => {
-		connection.write("Move: up")}, 1500)
-	});
-	conn.on('move up', () => {setTimeout(() => {
-		connection.write("Move: up")}, 2000)
-	});
 
-	conn.on('move right', () => {setTimeout(() => {
-		connection.write("Move: up")}, 3000)
-	});
-	*/
 
   conn.on("data", (data) => {
     console.log("DATA CAME IN!!!!!");

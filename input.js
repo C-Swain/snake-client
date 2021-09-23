@@ -1,25 +1,16 @@
-const handleUserInput = function (data) {
-	if (data === '\u0003') {
-		process.exit();
-	}
-	if (data==='w') { co
-		connection.write("Move:up");
-	};
-	if (data==='s') {
-		connection.write("Move:down");
-	};
-	if (data === 'd') {
-		connection.write("Move:right");
-	};
-	if (data==='w') {
-		connection.write("Move:left");
-	};
-
-
+let conn;
+const handleUserInput = function (key) {
+	if(key === 't') {
+let msg = 'SsSsSsS!';
+conn.write(`Say: ${msg}`)}
+  if(key === 'w') {conn.write("Move: up");}
+  if(key === 'a') {conn.write("Move: left");}
+  if(key === 'd'){conn.write("Move: right"); }
+  if(key === 's'){conn.write("Move: down"); }
 };
 
-
-const setupInput = function () {
+const setupInput = function (connection) {
+	conn = connection;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
